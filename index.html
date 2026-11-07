@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Không gian chia sẻ khoảnh khắc cùng bạn bè.">
+  <title>Locket Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main id="app">
+    <section class="auth-shell" id="auth-view">
+      <div class="auth-visual">
+        <div class="visual-top"><span class="brand-mark">♡</span><span class="brand-name">locket<span>studio</span></span></div>
+        <div class="visual-copy">
+          <span class="eyebrow">YOUR LITTLE WINDOW</span>
+          <h1>Những khoảnh khắc<br><em>gần nhau hơn.</em></h1>
+          <p>Chia sẻ những điều nhỏ bé trong ngày với vòng tròn bạn bè của bạn.</p>
+        </div>
+        <div class="phone-stack" aria-hidden="true">
+          <div class="mini-photo photo-a"><span>một ngày thật chill ☀</span></div>
+          <div class="mini-photo photo-b"><span>♡ 12</span></div>
+          <div class="mini-note">little<br>moments<br><b>matter.</b></div>
+          <div class="sparkle sparkle-a">✳</div><div class="sparkle sparkle-b">✦</div>
+        </div>
+        <div class="visual-footer">A softer way to stay close.</div>
+      </div>
+      <div class="auth-panel">
+        <div class="mobile-brand"><span class="brand-mark">♡</span><span class="brand-name">locket<span>studio</span></span></div>
+        <div class="auth-heading"><span class="eyebrow">WELCOME BACK</span><h2>Đăng nhập</h2><p>Đăng nhập để mở không gian của bạn.</p></div>
+        <form id="login-form" class="login-form">
+          <label for="license">Mã khách hàng <small>LICENSE</small></label>
+          <div class="field-wrap"><span class="field-icon">✧</span><input id="license" name="licenseCode" autocomplete="off" placeholder="Nhập mã khách hàng" required></div>
+          <label for="email">Tài khoản Locket</label>
+          <div class="field-wrap"><span class="field-icon">＠</span><input id="email" name="email" type="email" autocomplete="username" placeholder="Email tài khoản" required></div>
+          <label for="password">Mật khẩu Locket</label>
+          <div class="field-wrap"><span class="field-icon">⌑</span><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" required><button class="show-password" type="button" id="toggle-password" aria-label="Hiện mật khẩu">Hiện</button></div>
+          <div class="form-meta"><span>♧ Kết nối được bảo vệ</span><a href="#" id="help-link">Cần trợ giúp?</a></div>
+          <button class="primary-button" id="login-button" type="submit"><span>Đăng nhập an toàn</span><b>↗</b></button>
+          <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+        </form>
+        <div class="auth-bottom"><span>Chỉ sử dụng mã khách hàng hợp lệ.</span><span class="secure-note">● SECURE SESSION</span></div>
+      </div>
+    </section>
+    <section class="app-shell hidden" id="dashboard-view">
+      <aside class="sidebar">
+        <a class="sidebar-brand" href="#"><span class="brand-mark">♡</span><span class="brand-name">locket<span>studio</span></span></a>
+        <div class="side-label">WORKSPACE</div>
+        <nav class="side-nav" aria-label="Điều hướng chính">
+          <button class="nav-item active" data-page="home"><span>⌂</span> Tổng quan</button>
+          <button class="nav-item" data-page="friends"><span>♧</span> Bạn bè</button>
+          <button class="nav-item" data-page="history"><span>◷</span> Khoảnh khắc</button>
+          <button class="nav-item" data-page="studio"><span>✧</span> Studio</button>
+          <button class="nav-item" data-page="profile"><span>◎</span> Hồ sơ</button>
+        </nav>
+        <div class="sidebar-bottom"><div class="connection-card"><span class="online-dot"></span><div><b>API connection</b><small>Được cấu hình riêng</small></div></div><button id="logout-button" class="logout-button">↪ Đăng xuất</button></div>
+      </aside>
+      <section class="main-area">
+        <header class="topbar"><div><span class="eyebrow" id="page-kicker">YOUR SPACE</span><h2 id="page-title">Tổng quan</h2></div><div class="top-actions"><span class="today-chip" id="today-label"></span><div class="avatar" id="user-avatar">♡</div></div></header>
+        <div class="content-area">
+          <div class="welcome-banner"><div><span class="eyebrow">A LITTLE MOMENT, A BIG SMILE</span><h3>Xin chào, <span id="welcome-name">bạn</span> ✨</h3><p>Sẵn sàng chia sẻ một khoảnh khắc hôm nay chưa?</p><button class="banner-button" data-go="studio">Tạo khoảnh khắc <span>↗</span></button></div><div class="banner-art"><div class="art-card art-back">♡</div><div class="art-card art-front"><span>today</span><b>is a<br>good day.</b><small>✳</small></div><span class="art-star">✦</span></div></div>
+          <div class="section-heading"><div><span class="eyebrow">YOUR CIRCLE</span><h3>Không gian của bạn</h3></div><span class="subtle-label">LIVE WORKSPACE</span></div>
+          <div class="quick-grid">
+            <button class="quick-card" data-go="friends"><span class="quick-icon lilac">♧</span><b>Bạn bè</b><small>Kết nối vòng tròn của bạn</small><span class="quick-arrow">↗</span></button>
+            <button class="quick-card" data-go="history"><span class="quick-icon peach">◷</span><b>Khoảnh khắc</b><small>Xem lại những điều đã chia sẻ</small><span class="quick-arrow">↗</span></button>
+            <button class="quick-card" data-go="studio"><span class="quick-icon mint">✧</span><b>Studio</b><small>Tạo bài đăng ảnh hoặc video</small><span class="quick-arrow">↗</span></button>
+          </div>
+          <div class="section-heading recent-heading"><div><span class="eyebrow">RECENT ACTIVITY</span><h3>Hoạt động gần đây</h3></div></div>
+          <div class="empty-state"><div class="empty-illustration">♡</div><b>Chưa có dữ liệu hiển thị</b><p>Kết nối API để tải bạn bè và khoảnh khắc của bạn.</p></div>
+          <div id="page-panel" class="page-panel hidden"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="./config.js"></script>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
